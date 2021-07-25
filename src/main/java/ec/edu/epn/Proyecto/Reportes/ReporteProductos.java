@@ -9,11 +9,7 @@ import java.util.Date;
 
 public class ReporteProductos {
 
-    public class Reporte {
-        public Fecha fecha;
-        public Reporte() {
-            fecha=new Fecha();
-        }
+
 
 
         public void reporteProductos(Lista_Productos listaproductos){
@@ -34,7 +30,7 @@ public class ReporteProductos {
 
 
 
-        }
+
     public double totalProductos(Lista_Productos listaproductos) {
         double salida=0;
         for (int i = 0; i < listaproductos.productos.size(); i++) {
