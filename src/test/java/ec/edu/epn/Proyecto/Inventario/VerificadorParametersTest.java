@@ -6,7 +6,7 @@ import org.junit.runners.Parameterized;
 import java.util.ArrayList;
 import java.util.List;
 import static org.junit.Assert.*;
-
+@RunWith(value=Parameterized.class)
 public class VerificadorParametersTest {
     private String invoiceID; private boolean expected; private Verificador validator;
     @Before

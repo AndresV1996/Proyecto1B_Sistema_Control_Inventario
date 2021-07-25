@@ -3,19 +3,16 @@ package ec.edu.epn.Proyecto.Reportes;
 import ec.edu.epn.Proyecto.Inventario.Fecha;
 import ec.edu.epn.Proyecto.Listas.Lista_Productos;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class ReporteProductos {
-
-
-
-
-
 
     public class Reporte {
         public Fecha fecha;
-        public ValidadorReportes vr;
         public Reporte() {
             fecha=new Fecha();
-            vr=new ValidadorReportes();
         }
 
 
@@ -27,8 +24,9 @@ public class ReporteProductos {
                         "\t\t\t" + listaproductos.productos.get(i).cantidad + "\t\t\t"+
                         "\t\t\t" + listaproductos.productos.get(i).tipo_Producto + "\t\t\t" + listaproductos.productos.get(i).FechaExpiracion);
             }
-            System.out.println("El valor del inventario actual es: "+vr.totalProductos(listaproductos));
-            System.out.println("El numero de productos expirados es: "+vr.productosExpirados(listaproductos));
+            System.out.println("El valor del inventario actual es: "+totalProductos(listaproductos));
+            System.out.println("El numero de productos expirados es: "+productosExpirados(listaproductos));
+            System.out.println("el numero de productos aun vigentes es " + productosNoExpirados(listaproductos));
 
         }
 
@@ -37,5 +35,45 @@ public class ReporteProductos {
 
 
         }
+    public double totalProductos(Lista_Productos listaproductos) {
+        double salida=0;
+        for (int i = 0; i < listaproductos.productos.size(); i++) {
+            double valor = listaproductos.productos.get(i).cantidad * listaproductos.productos.get(i).precio;
+            salida = salida + valor;
+        }
+        return salida;
+    }
+
+    public int productosNoExpirados(Lista_Productos listaproductos) {
+        int sizeLista = listaproductos.productos.size();
+        int productos_expirados = productosExpirados(listaproductos);
+        return sizeLista-productos_expirados;
+    }
+
+    public int productosExpirados(Lista_Productos listaproductos) {
+        int aux = 0;
+
+        Date fechaactual = new Date(System.currentTimeMillis());
+        for (int i = 0; i < listaproductos.productos.size(); i++) {
+
+
+            SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
+            Date fechaInicioDate = null;  //String a date
+            try {
+                fechaInicioDate = date.parse(listaproductos.productos.get(i).FechaExpiracion);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
+            //comprueba si es que inicio esta después que fecha actual
+            if (fechaInicioDate.after(fechaactual)) {
+
+            } else {
+                aux += 1;
+            }
+
+        }
+        return aux;
+    }
     }
 

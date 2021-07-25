@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 public class Lista_Proveedores {
 
     public boolean existenciaProveedor(String nombre_proveedor){
-        for(int i = 0; i< this.proveedores.size(); i++ ) {
+        for (int i = 0; i < this.proveedores.size(); i++) {
             if (nombre_proveedor.equals(this.proveedores.get(i).getRazon_Social()) ) {
                 return false;
             }

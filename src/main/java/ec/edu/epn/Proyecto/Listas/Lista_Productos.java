@@ -31,7 +31,7 @@ public class Lista_Productos {
 
     public void añadirProducto(Producto producto){
        productos.add(producto);
-        System.out.println( "Producto registrado con exito  ");
+        //System.out.println( "Producto registrado con exito  ");
     }
 
     public void GuardarDatos() throws IOException {
