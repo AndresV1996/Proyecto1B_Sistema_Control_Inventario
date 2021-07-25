@@ -42,9 +42,9 @@ public class ReporteProductosParametersTest {
     @Parameterized.Parameters
     public static Iterable<Object[]> parameters(){
         List<Object[]> objects=new ArrayList<Object[]>();
-        objects.add(new Object[]{productlist,1286});
-        objects.add(new Object[]{productlist1,508.52});
-        objects.add(new Object[]{productlist2,1510.96});
+        objects.add(new Object[]{productlist,1281});
+        objects.add(new Object[]{productlist1,503.52});
+        objects.add(new Object[]{productlist2,1505.91});
 
 
         return objects; }

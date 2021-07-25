@@ -7,21 +7,10 @@ import java.util.ArrayList;
 public class Lista_Facturas {
     public ArrayList<Factura> invoices;
 
-    /*public InvoiceList() {
+    public Lista_Facturas() {
         this.invoices = new ArrayList<>();
     }
-    public String addInvoice(Invoice invoice){
-        String aux="Factura registrada con exito";
-        for(int i = 0; i<this.invoices.size(); i++){
-            if(invoice.invoiceId.equals(this.invoices.get(i).invoiceId)){
-                aux="Id de factura ya registrado";
-            }
-        }
-        if(!aux.equals("Id de factura ya registrado")){
-        this.invoices.add(invoice);
-        }
-        return aux;
-    }*/
+
 
     public String addInvoice(Factura invoice){
         for(int i = 0; i<this.invoices.size(); i++){

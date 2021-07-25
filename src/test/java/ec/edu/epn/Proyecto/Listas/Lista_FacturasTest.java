@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class Lista_FacturasTest {
-    Lista_Facturas invoiceList = null;
+    Lista_Facturas invoiceList ;
     Factura invoice1 =new Factura("848-345-423434532","supermaxi",45.56,"10/10/2020");
     Factura invoice2 =new Factura("123-345-345654564","tia",70,"08/10/2021");
     Factura invoice3 =new Factura("546-345-345654564","tia",34.87,"07/08/2021");
@@ -14,6 +14,7 @@ public class Lista_FacturasTest {
         invoiceList =new Lista_Facturas();
         invoiceList.invoices.add(invoice1);
         invoiceList.invoices.add(invoice2);
+
     }
     @Test
     public void given_invoice_id_when_invoice_search_then_ok(){
