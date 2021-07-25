@@ -19,7 +19,8 @@ public class Producto {
     public Producto(){
 
     }
-   public void registrarProducto(String codigo, String nombre, double precio , String proveedor, int cantidad , String marca , String tipo_Producto,
+
+   public Producto(String codigo, String nombre, double precio , String proveedor, int cantidad , String marca , String tipo_Producto,
                     String fecha){
         this.codigo= codigo;
         this.nombre=nombre;
