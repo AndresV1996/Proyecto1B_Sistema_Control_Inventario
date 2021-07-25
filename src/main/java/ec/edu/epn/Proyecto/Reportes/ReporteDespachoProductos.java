@@ -10,6 +10,7 @@ import java.util.Date;
 public class ReporteDespachoProductos {
 
     public void reporteDespachos(Lista_Despachos despachos){
+        System.out.println();
         System.out.println("====================REPORTE DE DESPACHOS DE PROUCTOS==================");
         System.out.println("Restaurante Don Pepe");
         System.out.println("Fecha del reporte: " + new Date(System.currentTimeMillis()));
@@ -17,7 +18,7 @@ public class ReporteDespachoProductos {
         System.out.println();
         System.out.println("Cantidad de productos despachados en este mes: " + ZonedDateTime.now().getMonth() + " : "
                 + cantidadDespachoxMes(despachos));
-        System.out.println("El producto que mas se despacho en este mes de " + ZonedDateTime.now().getMonth() + " es: " +
+        System.out.println("El producto mas despachado en este mes de " + ZonedDateTime.now().getMonth() +" es " +
                 productoMayorDemanda(despachos));
     }
 

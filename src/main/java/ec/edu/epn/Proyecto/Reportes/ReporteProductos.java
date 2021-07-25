@@ -13,16 +13,18 @@ public class ReporteProductos {
 
 
         public void reporteProductos(Lista_Productos listaproductos){
-            System.out.println("Reporte Clientes");
+            System.out.println("=======================REPORTE DE PRODUCTOS====================================");
+            System.out.println("Restaurante Don Pepe");
+            System.out.println("Fecha del reporte: " + new Date(System.currentTimeMillis()));
             System.out.println("codigo\t\t\t nombre\t\t\t precio\t\t\t cantidad\t\t\t tipo_producto\t\t\t fecha expiracion");
             for(int i=0; i<listaproductos.productos.size(); i++){
                 System.out.println(listaproductos.productos.get(i).codigo +"\t\t\t" + listaproductos.productos.get(i).nombre +"\t\t\t" + listaproductos.productos.get(i).precio + "\t\t\t" +
-                        "\t\t\t" + listaproductos.productos.get(i).cantidad + "\t\t\t"+
-                        "\t\t\t" + listaproductos.productos.get(i).tipo_Producto + "\t\t\t" + listaproductos.productos.get(i).FechaExpiracion);
+                        "\t\t" + listaproductos.productos.get(i).cantidad + "\t\t\t"+ listaproductos.productos.get(i).tipo_Producto + "\t\t\t" + listaproductos.productos.get(i).FechaExpiracion);
             }
-            System.out.println("El valor del inventario actual es: "+totalProductos(listaproductos));
-            System.out.println("El numero de productos expirados es: "+productosExpirados(listaproductos));
-            System.out.println("el numero de productos aun vigentes es " + productosNoExpirados(listaproductos));
+            System.out.println();
+            System.out.println("El valor del inventario actual es: $ "+totalProductos(listaproductos));
+            System.out.println("El número de productos expirados es: "+productosExpirados(listaproductos));
+            System.out.println("Número de productos aun vigentes: " + productosNoExpirados(listaproductos));
 
         }
 
