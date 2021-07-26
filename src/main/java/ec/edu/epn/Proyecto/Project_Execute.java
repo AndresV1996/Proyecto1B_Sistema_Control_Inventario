@@ -1,4 +1,4 @@
-package ec.edu.epn.Proyecto.Execute;
+package ec.edu.epn.Proyecto;
 
 import ec.edu.epn.Proyecto.Inventario.Despacho_Productos;
 import ec.edu.epn.Proyecto.Inventario.Producto;
