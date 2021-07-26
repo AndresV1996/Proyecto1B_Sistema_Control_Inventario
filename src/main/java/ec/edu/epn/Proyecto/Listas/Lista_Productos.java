@@ -6,7 +6,10 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Lista_Productos {
 
@@ -52,5 +55,22 @@ public class Lista_Productos {
     }
 
 
-
+    public int productosExpirados(){
+        int aux = 0;
+        Date fechaInicioDate = null;
+        Date fechaactual = new Date(System.currentTimeMillis());
+        for (int i = 0; i < productos.size(); i++) {
+            SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
+            try {
+                fechaInicioDate = date.parse(productos.get(i).FechaExpiracion);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            //comprueba si es que inicio esta después que fecha actual
+            if (!fechaInicioDate.after(fechaactual)) {
+                aux += 1;
+            }
+        }
+        return aux;
+    }
 }

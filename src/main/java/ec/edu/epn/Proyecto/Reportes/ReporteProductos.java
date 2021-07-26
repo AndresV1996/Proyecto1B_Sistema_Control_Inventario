@@ -1,10 +1,7 @@
 package ec.edu.epn.Proyecto.Reportes;
 
-import ec.edu.epn.Proyecto.Inventario.Fecha;
 import ec.edu.epn.Proyecto.Listas.Lista_Productos;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ReporteProductos {
@@ -23,7 +20,7 @@ public class ReporteProductos {
             }
             System.out.println();
             System.out.println("El valor del inventario actual es: $ "+totalProductos(listaproductos));
-            System.out.println("El número de productos expirados es: "+productosExpirados(listaproductos));
+            System.out.println("El número de productos expirados es: "+ listaproductos.productosExpirados());
             System.out.println("Número de productos aun vigentes: " + productosNoExpirados(listaproductos));
 
         }
@@ -44,34 +41,9 @@ public class ReporteProductos {
 
     public int productosNoExpirados(Lista_Productos listaproductos) {
         int sizeLista = listaproductos.productos.size();
-        int productos_expirados = productosExpirados(listaproductos);
+        int productos_expirados = listaproductos.productosExpirados();
         return sizeLista-productos_expirados;
     }
 
-    public int productosExpirados(Lista_Productos listaproductos) {
-        int aux = 0;
-
-        Date fechaactual = new Date(System.currentTimeMillis());
-        for (int i = 0; i < listaproductos.productos.size(); i++) {
-
-
-            SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
-            Date fechaInicioDate = null;  //String a date
-            try {
-                fechaInicioDate = date.parse(listaproductos.productos.get(i).FechaExpiracion);
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
-
-            //comprueba si es que inicio esta después que fecha actual
-            if (fechaInicioDate.after(fechaactual)) {
-
-            } else {
-                aux += 1;
-            }
-
-        }
-        return aux;
-    }
-    }
+}
 

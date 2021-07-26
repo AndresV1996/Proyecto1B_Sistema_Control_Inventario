@@ -23,7 +23,7 @@ public class ReporteProductosTest {
     @Test
     public void given_ExpirationDate_when_verifydate_then_ok(){
         ReporteProductos vr=new ReporteProductos();
-        assertEquals(1,vr.productosExpirados(productlist));
+        assertEquals(1, productlist.productosExpirados());
 
     }
 
