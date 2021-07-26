@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="ec.edu.epn.Proyecto.Inventario.VerificadorTest" time="0" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="ec.edu.epn.Proyecto.Inventario.VerificadorTest" time="0.001" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.1.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -66,5 +66,5 @@
   </properties>
   <testcase classname="ec.edu.epn.Proyecto.Inventario.VerificadorTest" name="given_invoice_invalid_id_when_validation_then_ok" time="0"/>
   <testcase classname="ec.edu.epn.Proyecto.Inventario.VerificadorTest" name="given_invoice_id_when_validation_then_ok" time="0"/>
-  <testcase classname="ec.edu.epn.Proyecto.Inventario.VerificadorTest" name="given_invoice_date_when_validation_date_then_ok" time="0"/>
+  <testcase classname="ec.edu.epn.Proyecto.Inventario.VerificadorTest" name="given_invoice_date_when_validation_date_then_ok" time="0.001"/>
 </testsuite>
