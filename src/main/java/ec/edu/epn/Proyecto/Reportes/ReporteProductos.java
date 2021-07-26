@@ -30,6 +30,7 @@ public class ReporteProductos {
 
 
 
+
     public double totalProductos(Lista_Productos listaproductos) {
         double salida=0;
         for (int i = 0; i < listaproductos.productos.size(); i++) {
