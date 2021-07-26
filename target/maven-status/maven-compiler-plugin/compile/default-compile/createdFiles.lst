@@ -1,0 +1,11 @@
+ec\edu\epn\Proyecto\Inventario\Fecha.class
+ec\edu\epn\Proyecto\Listas\Lista_Proveedores.class
+ec\edu\epn\Proyecto\Listas\Lista_Productos.class
+ec\edu\epn\Proyecto\Reportes\ReporteDespachoProductos.class
+ec\edu\epn\Proyecto\Listas\Lista_Despachos.class
+ec\edu\epn\Proyecto\Inventario\Despacho_Productos.class
+ec\edu\epn\Proyecto\Inventario\Producto.class
+ec\edu\epn\Proyecto\Project_Execute.class
+ec\edu\epn\Proyecto\Inventario\Proveedor.class
+ec\edu\epn\Proyecto\Reportes\ReporteProductos.class
+ec\edu\epn\Proyecto\Inventario\Verificador.class
